@@ -1,9 +1,10 @@
 package modules
+
 import (
-	"os"
 	"fmt"
 	"github.com/PaulSonOfLars/gotgbot/v2"
 	"github.com/PaulSonOfLars/gotgbot/v2/ext"
+	"os"
 	"strconv"
 )
 

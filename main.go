@@ -1,14 +1,13 @@
 package main
 
 import (
+	"github.com/PaulSonOfLars/gotgbot/v2"
+	"github.com/PaulSonOfLars/gotgbot/v2/ext"
 	"libri_musica_gratis/bot/modules"
 	"log"
 	"os"
 	"time"
-	"github.com/PaulSonOfLars/gotgbot/v2"
-	"github.com/PaulSonOfLars/gotgbot/v2/ext"
 )
-
 
 func main() {
 	token := os.Getenv("TOKEN")
@@ -46,7 +45,3 @@ func main() {
 
 	updater.Idle()
 }
-
-
-
-
