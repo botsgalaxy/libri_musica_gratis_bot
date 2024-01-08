@@ -9,4 +9,5 @@ import (
 func RegisterHandlers(dispatcher *ext.Dispatcher) {
 	dispatcher.AddHandler(handlers.NewCommand("start", start))
 	dispatcher.AddHandler(handlers.NewCallback(callbackquery.Equal("verify"), verify))
+	dispatcher.AddHandler(handlers.NewCommand("broadcast",broadcast))
 }
