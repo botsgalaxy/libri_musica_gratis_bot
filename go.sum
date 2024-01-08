@@ -1,2 +1,4 @@
 github.com/PaulSonOfLars/gotgbot/v2 v2.0.0-rc.23 h1:gfa4qPLiGemeBgQDEFH4s8N9HcS+5o+V/4ycmB35c1Y=
 github.com/PaulSonOfLars/gotgbot/v2 v2.0.0-rc.23/go.mod h1:kL1v4iIjlalwm3gCYGvF4NLa3hs+aKEfRkNJvj4aoDU=
+github.com/mattn/go-sqlite3 v1.14.19 h1:fhGleo2h1p8tVChob4I9HpmVFIAkKGpiukdrgQbWfGI=
+github.com/mattn/go-sqlite3 v1.14.19/go.mod h1:2eHXhiwb8IkHr+BDWZGa96P6+rkvnG63S2DGjv9HUNg=

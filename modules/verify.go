@@ -24,6 +24,7 @@ func init() {
 }
 
 func verify(b *gotgbot.Bot, ctx *ext.Context) error {
+	ctx.EffectiveMessage.Delete(b, nil)
 	query := ctx.Update.CallbackQuery
 	query.Answer(b, nil)
 	userId := ctx.EffectiveUser.Id
@@ -55,8 +56,8 @@ func verify(b *gotgbot.Bot, ctx *ext.Context) error {
 				}},
 			},
 		}
-		_, err = ctx.EffectiveMessage.Reply(
-			b,
+		_, err = b.SendMessage(
+			userId,
 			text,
 			&gotgbot.SendMessageOpts{
 				ParseMode:   "html",

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/PaulSonOfLars/gotgbot/v2"
 	"github.com/PaulSonOfLars/gotgbot/v2/ext"
+	"time"
 )
 
 var StartMessage = `<b>✅ | SBLOCCA L' ACCESSO </b>
@@ -34,6 +35,15 @@ var ReplyMarkup = gotgbot.InlineKeyboardMarkup{
 }
 
 func start(b *gotgbot.Bot, ctx *ext.Context) error {
+	effectiveUser := ctx.EffectiveUser
+	user := User{
+		UserId:    effectiveUser.Id,
+		FirstName: effectiveUser.FirstName,
+		LastName:  effectiveUser.LastName,
+		Username:  effectiveUser.Username,
+		CreatedAt: time.Now(),
+	}
+	user.SaveUser()
 	_, err := ctx.EffectiveMessage.Reply(b, StartMessage, &gotgbot.SendMessageOpts{
 		ParseMode:   "html",
 		ReplyMarkup: ReplyMarkup,

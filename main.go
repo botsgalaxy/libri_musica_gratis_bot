@@ -19,6 +19,8 @@ func main() {
 	if err != nil {
 		panic("failed to create new bot: " + err.Error())
 	}
+	modules.ConnectDatabase()
+
 	dispatcher := ext.NewDispatcher(&ext.DispatcherOpts{
 		Error: func(b *gotgbot.Bot, ctx *ext.Context, err error) ext.DispatcherAction {
 			log.Println("an error occurred while handling update:", err.Error())
